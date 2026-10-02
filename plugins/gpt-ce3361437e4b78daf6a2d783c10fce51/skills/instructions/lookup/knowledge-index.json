@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "name": "00-kildebruk-og-svarregler.md",
+      "path": "references/00-kildebruk-og-svarregler.md"
+    },
+    {
+      "name": "01-fest-oversikt-og-begreper.md",
+      "path": "references/01-fest-oversikt-og-begreper.md"
+    },
+    {
+      "name": "02-informasjonsmodell-og-xml-struktur.md",
+      "path": "references/02-informasjonsmodell-og-xml-struktur.md"
+    },
+    {
+      "name": "03-legemiddel-pakning-refusjon-og-bytte.md",
+      "path": "references/03-legemiddel-pakning-refusjon-og-bytte.md"
+    },
+    {
+      "name": "04-administrering-interaksjoner-varsler-og-handelsvarer.md",
+      "path": "references/04-administrering-interaksjoner-varsler-og-handelsvarer.md"
+    },
+    {
+      "name": "05-mapping-og-forretningsregler.md",
+      "path": "references/05-mapping-og-forretningsregler.md"
+    },
+    {
+      "name": "06-fullt-og-inkrementelt-uttrekk.md",
+      "path": "references/06-fullt-og-inkrementelt-uttrekk.md"
+    },
+    {
+      "name": "07-webservice-nedlasting-og-oppdatering.md",
+      "path": "references/07-webservice-nedlasting-og-oppdatering.md"
+    },
+    {
+      "name": "08-teknisk-xsd-referanse.md",
+      "path": "references/08-teknisk-xsd-referanse.md"
+    },
+    {
+      "name": "09-lokale-kataloger.md",
+      "path": "references/09-lokale-kataloger.md"
+    }
+  ]
+}

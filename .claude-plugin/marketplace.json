@@ -1,7 +1,15 @@
 {
   "name": "roar-agent-plugins",
+  "description": "Roars plugins for lokale agentverter, med FEST 2.5.1-ekspert.",
   "owner": {
     "name": "Roar Andersen"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "gpt-ce3361437e4b78daf6a2d783c10fce51",
+      "version": "0.2.1",
+      "source": "./plugins/gpt-ce3361437e4b78daf6a2d783c10fce51",
+      "description": "Faglig og teknisk assistent for informasjonsmodellen, XML-strukturen og forretningsreglene i FEST 2.5.1."
+    }
+  ]
 }

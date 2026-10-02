@@ -1,0 +1,10 @@
+{
+  "name": "gpt-ce3361437e4b78daf6a2d783c10fce51",
+  "version": "0.2.1",
+  "description": "Faglig og teknisk assistent for informasjonsmodellen, XML-strukturen og forretningsreglene i FEST 2.5.1.",
+  "author": {
+    "name": "ROAR ANDERSEN"
+  },
+  "repository": "https://github.com/roar-andersen/agent-plugins",
+  "displayName": "FEST 2.5.1-ekspert"
+}
