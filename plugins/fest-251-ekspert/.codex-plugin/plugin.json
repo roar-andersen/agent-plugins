@@ -1,0 +1,26 @@
+{
+  "author": {
+    "name": "ROAR ANDERSEN"
+  },
+  "description": "Faglig og teknisk assistent for FEST 2.5.1: informasjonsmodell, XML/XSD og forretningsregler, nedlasting og søk i lokale FEST-filer, og integrasjon mot FestService251.svc (GetM30, inkrementell oppdatering, C#/.NET).",
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Developer Tools",
+    "defaultPrompt": [
+      "Kom i gang med FEST-pluginen og last ned FEST-filene.",
+      "Forklar informasjonsmodellen i FEST 2.5.1.",
+      "Vis en C#-klient for inkrementell oppdatering med GetM30."
+    ],
+    "developerName": "ROAR ANDERSEN",
+    "displayName": "FEST 2.5.1-ekspert: modell, katalogsøk og webservice",
+    "longDescription": "Faglig og teknisk assistent for FEST 2.5.1. Forklarer informasjonsmodell, XML/XSD, mapping og forretningsregler. Laster ned og søker i lokale FEST-uttrekk fra DMP etter et engangsoppsett i samtalen (krever lokal kjøring og Python 3.10+ med SQLite FTS5). Veileder om integrasjon mot webservicen FestService251.svc: endepunkter, SOAP 1.2 og WS-Addressing, GetM30, filtre, fullt og inkrementelt uttrekk, returkoder, store meldinger og feilbehandling, med testede C#/.NET-klienter (HttpClient og WCF).",
+    "shortDescription": "FEST 2.5.1: modell, katalogsøk og webservice"
+  },
+  "name": "fest-251-ekspert",
+  "skills": "./skills/",
+  "version": "0.3.0",
+  "requires_local_executor": true,
+  "repository": "https://github.com/roar-andersen/agent-plugins"
+}

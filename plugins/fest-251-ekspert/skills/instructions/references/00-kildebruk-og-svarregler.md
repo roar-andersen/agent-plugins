@@ -24,7 +24,7 @@ Alias og søkeord: direkte kilde, avledet XSD, tolkning, uavklart, sikkerhet
 FEST-versjon: 2.5.1  
 Påstandsstatus: DIREKTE_KILDE
 
-Bruk bare statusene `DIREKTE_KILDE`, `AVLEDET_XSD`, `TOLKNING` og `UAVKLART`. En kardinalitet fra `minOccurs` og `maxOccurs` er `AVLEDET_XSD`; en eksplisitt praktisk kardinalitet i veiledningen er `DIREKTE_KILDE`. Kardinalitet skal aldri gis status `TOLKNING`. Hvis det ikke finnes sikkert grunnlag, svar `UAVKLART` og ikke gjett.
+Bruk bare statusene `DIREKTE_KILDE`, `AVLEDET_XSD`, `AVLEDET_WSDL`, `TESTET`, `TOLKNING` og `UAVKLART`. `AVLEDET_WSDL` gjelder tjenestekontrakten fra `FestService251.svc?singleWsdl`. `TESTET` gjelder observert oppførsel ved kall mot tjenesten på en oppgitt dato, og er ikke et DMP-krav. En kardinalitet fra `minOccurs` og `maxOccurs` er `AVLEDET_XSD`; en eksplisitt praktisk kardinalitet i veiledningen er `DIREKTE_KILDE`. Kardinalitet skal aldri gis status `TOLKNING`. Hvis det ikke finnes sikkert grunnlag, svar `UAVKLART` og ikke gjett.
 
 Svar med eksakte XML-navn og skill klasse/informasjonsmodell fra fysisk lagring. Ikke bruk begrepene tabell, primærnøkkel eller fremmednøkkel om FEST-modellen. Oppgi kilde ved tekniske påstander. Når fullt og inkrementelt uttrekk gir ulik valideringskontekst, spør hvilken uttrekkstype brukeren mener.
 
@@ -40,5 +40,7 @@ Påstandsstatus: DIREKTE_KILDE
 - `XSD-M30-FULL-2014-12-01` og `XSD-M30-INCREMENTAL-2014-12-01`: M30-skjemaene.
 - `XSD-FORSKRIVNING-FULL-2014-12-01` og `XSD-FORSKRIVNING-INCREMENTAL-2014-12-01`: Forskrivning-skjemaene.
 - `XSD-KITH-COMMON`: importerte KITH-datatyper.
+- `FEST-WSDL-251`: `FestService251.svc?singleWsdl`, hentet 2026-10-02 fra produksjon og test på internett.
+- `TEST-2026-10-02`: testprotokoll for webservice og C#-klienter i `10-webservice-integrasjon-dotnet.md`.
 
 Full URL, hash og lokal filsti finnes i `manifest.json`, som ikke inngår i GPT-opplastingssettet.

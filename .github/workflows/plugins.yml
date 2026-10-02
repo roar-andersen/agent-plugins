@@ -25,6 +25,13 @@ jobs:
         run: python scripts/plugin_versions.py
       - name: Test FEST import and search
         run: python -m unittest discover -s tests -v
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build .NET examples
+        run: |
+          dotnet build plugins/fest-251-ekspert/skills/instructions/examples/dotnet/HttpClient -c Release
+          dotnet build plugins/fest-251-ekspert/skills/instructions/examples/dotnet/Wcf -c Release
 
   release:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'

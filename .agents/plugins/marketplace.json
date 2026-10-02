@@ -5,11 +5,11 @@
   },
   "plugins": [
     {
-      "name": "gpt-ce3361437e4b78daf6a2d783c10fce51",
-      "version": "0.2.1",
+      "name": "fest-251-ekspert",
+      "version": "0.3.0",
       "source": {
         "source": "local",
-        "path": "./plugins/gpt-ce3361437e4b78daf6a2d783c10fce51"
+        "path": "./plugins/fest-251-ekspert"
       },
       "policy": {
         "installation": "AVAILABLE",

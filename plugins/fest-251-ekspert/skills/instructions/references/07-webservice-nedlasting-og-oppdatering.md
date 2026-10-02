@@ -1,5 +1,7 @@
 # Webservice, nedlasting og oppdatering
 
+Denne filen gjengir DMPs dokumentasjon. Tjenestekontrakten fra WSDL, testede avvik, returkoder utover dokumentasjonen og klientkode i C#/.NET finnes i [integrasjon mot FestService251.svc](10-webservice-integrasjon-dotnet.md). Ved konflikt gjelder WSDL for meldingsformat, mens testede observasjoner merkes `TESTET`.
+
 ## Tjenestemodell og `GetM30`
 
 Alias og søkeord: WCF, SOAP, `GetM30`, `m30Response`, WS-Addressing  
@@ -8,7 +10,9 @@ Påstandsstatus: DIREKTE_KILDE
 
 FEST er dokumentert som en standard synkron WCF-webservice med request-response. Både SOAP 1.1 og SOAP 1.2 støttes. Metoden `GetM30` har parameterne `Filter` og `SistOppdatert` og returnerer `m30Response`. WS-Addressing brukes, slik at `Action` og `To` må være med i SOAP-headeren. Eksempelet i kilden viser en eldre tjenestevariant; for 2.5.1 skal tjenestenavnet være `FestService251`, og klienten bør hente kontraktens faktiske Action/To fra 2.5.1-tjenestens metadata. [DMP-GRENSESNITT-2024-05-13, PDF-side 4-5, kapittel 3]
 
-`m30Response` inneholder `M30Message` og `Returkode`. Dokumenterte returkoder er `V=1` for OK og `V=8` for uventet feil. Selv ved `V=1` kan `M30Message` være tom. [DMP-GRENSESNITT-2024-05-13, PDF-side 5, `m30Response`]
+Ifølge WSDL-en for 2.5.1 er Action `http://www.slv.no/201410325/FestService251/GetM30`. På XML-nivå heter parameterne `filter` og `incrementalDate`. Bare SOAP 1.2 er eksponert; SOAP 1.1 ble avvist ved test. Se [integrasjonsreferansen](10-webservice-integrasjon-dotnet.md). [FEST-WSDL-251; TEST-2026-10-02]
+
+`m30Response` inneholder `M30Message` og `Returkode`. Dokumenterte returkoder er `V=1` for OK og `V=8` for uventet feil. Selv ved `V=1` kan `M30Message` være tom. Ved test ble også `V=4` (ugyldig filter) og `V=5` (ugyldig innkommende dato) observert; de er ikke dokumentert. [DMP-GRENSESNITT-2024-05-13, PDF-side 5, `m30Response`]
 
 ## Filtre
 
@@ -28,7 +32,7 @@ Påstandsstatus: DIREKTE_KILDE
 |---|---|---|---|
 | Produksjon | NHN | `frontend-fest.nhn.no` | `Fest/FestService251.svc` |
 | Produksjon | Internett | `fest.legemiddelverket.no` | `Fest/FestService251.svc` |
-| Staging | NHN | `frontend-fest.nhn.no` | `StagingFest/FestService251.svc` |
+| Staging | NHN | `frontend-fest.nhn.no` | `StagingFest/FestService251.svc` (ikke Bandasjist) |
 | Test | NHN | `frontend-fest-test.nhn.no` | `TestFest/FestService251.svc` |
 | Test | Internett | `fest-test.legemiddelverket.no` | `TestFest/FestService251.svc` |
 

@@ -8,7 +8,7 @@ Roars Agent Plugins: en felles GitHub-katalog for pluginer til Claude Code, Chat
 - Claude Code: `.claude-plugin/marketplace.json`
 - Felles plugininnhold: `plugins/<plugin-navn>/`
 
-Katalogene inneholder **FEST 2.5.1-ekspert**, som forklarer FEST og kan laste ned og søke i lokale FEST-uttrekk. Filstøtten krever en lokal agentvert og Python 3.10+ med SQLite FTS5. Se [veiledningen](plugins/README.md).
+Katalogene inneholder **FEST 2.5.1-ekspert**. Pluginen forklarer FEST, laster ned og søker i lokale FEST-uttrekk, og veileder om integrasjon mot webservicen `FestService251.svc`, med testede C#/.NET-klienter. Filstøtten krever en lokal agentvert og Python 3.10+ med SQLite FTS5. Se [brukerveiledningen](plugins/fest-251-ekspert/README.md) for å komme i gang, og [vedlikeholdsveiledningen](plugins/README.md) for å lage pluginer.
 
 ## Codex CLI
 
@@ -25,7 +25,7 @@ claude plugin marketplace add roar-andersen/agent-plugins
 Etter at en plugin er publisert:
 
 ```powershell
-claude plugin install gpt-ce3361437e4b78daf6a2d783c10fce51@roar-agent-plugins
+claude plugin install fest-251-ekspert@roar-agent-plugins
 ```
 
 ## ChatGPT
@@ -40,14 +40,14 @@ Det finnes ingen universell marketplace-installasjon som er dokumentert for alle
 
 Bruk PR-er til `main`, øk pluginens versjon ved endringer, og bruk Git-tagger for utgivelser. Hold begge marketplace-katalogene oppdatert når pluginer legges til eller fjernes.
 
-Pluginens navn beholdes fra den eksisterende kontopluginen slik at identiteten er stabil. Marketplace-installasjonen og kontoinstallasjonen har ulike distribusjonskilder; bruk én av dem for å unngå duplisert funksjonalitet.
+Det tekniske pluginnavnet er `fest-251-ekspert` fra versjon 0.3.0. Tidligere het pluginen `gpt-ce3361437e4b78daf6a2d783c10fce51`, arvet fra kontopluginen i ChatGPT. Navnet er pluginens identitet, så eldre installasjoner oppdateres ikke automatisk. Avinstaller den gamle og installer `fest-251-ekspert`. Kontoinstallasjonen og marketplace-installasjonen har ulike distribusjonskilder; bruk én av dem for å unngå duplisert funksjonalitet.
 
 ### Semantisk versjonering og oppdateringer
 
 Versjonen finnes i portable-, Codex- og Claude-manifestene og i begge marketplace-katalogene. Øk alle samlet:
 
 ```powershell
-python scripts/plugin_versions.py --plugin gpt-ce3361437e4b78daf6a2d783c10fce51 --bump patch
+python scripts/plugin_versions.py --plugin fest-251-ekspert --bump patch
 ```
 
 Bruk `minor` for nye funksjoner og `major` for brytende endringer. GitHub Actions kontrollerer manifestene og kjører tester. Etter merge til `main` øker workflowen automatisk patch dersom plugininnholdet er endret uten en eksplisitt versjonsøkning, samordner katalogene og lager en tagg `<plugin-navn>-v<versjon>`. En eksplisitt høyere versjon beholdes. Workflowen trenger skrivetilgang til innhold; branch protection må tillate versjonscommit fra denne workflowen for automatisk bump. Hvis dette ikke er tillatt, øk versjonen i PR-en med kommandoen over.

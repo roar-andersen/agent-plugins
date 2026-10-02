@@ -39,6 +39,14 @@
     {
       "name": "09-lokale-kataloger.md",
       "path": "references/09-lokale-kataloger.md"
+    },
+    {
+      "name": "10-webservice-integrasjon-dotnet.md",
+      "path": "references/10-webservice-integrasjon-dotnet.md"
+    },
+    {
+      "name": "examples/dotnet",
+      "path": "examples/dotnet/"
     }
   ]
 }
