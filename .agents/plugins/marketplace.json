@@ -1,0 +1,7 @@
+{
+  "name": "roar-agent-plugins",
+  "interface": {
+    "displayName": "Roars Agent Plugins"
+  },
+  "plugins": []
+}
