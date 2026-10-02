@@ -1,4 +1,0 @@
-interface:
-  default_prompt: Forklar informasjonsmodellen i FEST 2.5.1.
-  display_name: FEST 2.5.1-ekspert
-  short_description: Faglig og teknisk assistent for informasjonsmodellen, XML-strukt

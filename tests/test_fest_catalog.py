@@ -5,7 +5,7 @@ import tempfile
 import unittest
 import zipfile
 
-SCRIPT = Path(__file__).resolve().parents[1] / 'plugins/gpt-ce3361437e4b78daf6a2d783c10fce51/skills/instructions/scripts/fest_catalog.py'
+SCRIPT = Path(__file__).resolve().parents[1] / 'plugins/fest-251-ekspert/skills/instructions/scripts/fest_catalog.py'
 spec = importlib.util.spec_from_file_location('fest_catalog', SCRIPT)
 fest = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(fest)

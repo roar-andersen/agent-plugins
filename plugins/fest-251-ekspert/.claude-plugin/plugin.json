@@ -1,0 +1,21 @@
+{
+  "name": "fest-251-ekspert",
+  "version": "0.3.0",
+  "description": "Faglig og teknisk assistent for FEST 2.5.1: informasjonsmodell, XML/XSD og forretningsregler, nedlasting og søk i lokale FEST-filer, og integrasjon mot FestService251.svc (GetM30, inkrementell oppdatering, C#/.NET).",
+  "author": {
+    "name": "ROAR ANDERSEN"
+  },
+  "repository": "https://github.com/roar-andersen/agent-plugins",
+  "displayName": "FEST 2.5.1-ekspert: modell, katalogsøk og webservice",
+  "keywords": [
+    "FEST",
+    "M30",
+    "eResept",
+    "DMP",
+    "legemidler",
+    "GetM30",
+    "SOAP",
+    "WCF",
+    "dotnet"
+  ]
+}

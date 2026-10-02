@@ -1,15 +1,15 @@
 {
   "name": "roar-agent-plugins",
-  "description": "Roars plugins for lokale agentverter, med FEST 2.5.1-ekspert.",
+  "description": "Roars plugins for lokale agentverter, med FEST 2.5.1-ekspert (modell, katalogsøk og webservice-integrasjon).",
   "owner": {
     "name": "Roar Andersen"
   },
   "plugins": [
     {
-      "name": "gpt-ce3361437e4b78daf6a2d783c10fce51",
-      "version": "0.2.1",
-      "source": "./plugins/gpt-ce3361437e4b78daf6a2d783c10fce51",
-      "description": "Faglig og teknisk assistent for informasjonsmodellen, XML-strukturen og forretningsreglene i FEST 2.5.1."
+      "name": "fest-251-ekspert",
+      "version": "0.3.0",
+      "source": "./plugins/fest-251-ekspert",
+      "description": "Faglig og teknisk assistent for FEST 2.5.1: informasjonsmodell, XML/XSD og forretningsregler, nedlasting og søk i lokale FEST-filer, og integrasjon mot FestService251.svc (GetM30, inkrementell oppdatering, C#/.NET)."
     }
   ]
 }

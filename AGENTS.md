@@ -1,7 +1,7 @@
 # Vedlikehold av pluginer
 
 - Gjør endringer gjennom PR til main. Ikke merge eller godkjenn PR-er automatisk.
-- Behold samme pluginnavn ved oppdatering, og bevar øvrige pluginer/marketplace-oppføringer.
+- Behold samme pluginnavn ved oppdatering (navnet er pluginens identitet), og bevar øvrige pluginer/marketplace-oppføringer. Navnebytte krever eksplisitt beslutning og en migreringsmerknad i README.
 - Bruk semantiske versjoner MAJOR.MINOR.PATCH uten datostempler eller build-suffiks.
 - Ved pluginendringer, kjør `python scripts/plugin_versions.py --plugin <navn> --bump patch`. Bruk `minor` for nye funksjoner og `major` for brytende endringer. Verktøyet oppdaterer alle manifestene og begge marketplace-katalogene.
 - Main-workflow øker automatisk patch når plugininnholdet er endret uten versjonsøkning. Eksplisitt høyere versjon beholdes. Ikke gjør en ekstra bump bare for CI-synkroniseringen.

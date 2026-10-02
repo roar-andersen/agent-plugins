@@ -1,6 +1,6 @@
 # Pluginer
 
-Legg hver plugin i `plugins/<plugin-navn>/`. FEST 2.5.1-ekspert finnes i `gpt-ce3361437e4b78daf6a2d783c10fce51/`, med dokumentasjon i skillens referanser.
+Legg hver plugin i `plugins/<plugin-navn>/`. FEST 2.5.1-ekspert finnes i `fest-251-ekspert/`, med dokumentasjon i skillens referanser.
 
 For støtte i både Claude Code og ChatGPT/Codex, bruk `.claude-plugin/plugin.json` i pluginmappen og del `skills/<skill-navn>/SKILL.md`. OpenAI støtter Claude-kompatible pakker. Et portabelt `plugin.json` ved pluginroten kan legges til for verter som støtter Agent Plugins 1.0; dette gir ikke automatisk støtte i alle agenter.
 

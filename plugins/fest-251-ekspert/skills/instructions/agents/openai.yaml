@@ -1,0 +1,4 @@
+interface:
+  default_prompt: "Kom i gang med FEST-pluginen og last ned FEST-filene."
+  display_name: "FEST 2.5.1-ekspert: modell, katalogsøk og webservice"
+  short_description: "FEST 2.5.1: modell, katalogsøk og webservice"
